@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "buscador-personajes",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,13 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@tailwindcss/vite": "^4.0.16",
+    "axios": "^1.8.4",
+    "bootstrap-icons": "^1.11.3",
+    "framer-motion": "^12.6.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-loader-spinner": "^6.1.6",
+    "react-toastify": "^11.0.5",
+    "tailwindcss": "^4.0.16"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^18.3.6",
     "@vitejs/plugin-react-swc": "^3.8.0",
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",

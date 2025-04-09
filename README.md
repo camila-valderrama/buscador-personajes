@@ -1,12 +1,9 @@
-# React + Vite
+# Proyecto Sprint 4- Buscador de Personajes
+Es una app que te permite buscar los personajes de la serie Rick y Morty desde una API gratuita: https://rickandmortyapi.com/. Se realiza la busqueda indicando al menos 3 caracteres y se puede agregar los personajes a favoritos.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En este caso, se eligió Axios para la petición debido a que se puede aprovechar la respuesta en formato JSON y se mejora el manejo de errores. 
 
-Currently, two official plugins are available:
+## Deploy
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Diplomatura Desarrollo Web Full Stack con Orientación en JavaScript
