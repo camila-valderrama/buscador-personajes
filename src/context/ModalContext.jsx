@@ -13,7 +13,6 @@ export const ModalProvider = ({ children }) => {
     setModalOpen(prev => !prev); // Uso seguro del valor anterior
   };
 
-  // Opcional: funciones más específicas
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
 

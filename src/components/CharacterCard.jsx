@@ -2,7 +2,7 @@ import React from 'react';
 import { useCharacters } from '../context/CharactersContext';
 import { motion } from 'framer-motion';
 
-const CharactersCard = ({ id, name, species, image }) => {
+const CharactersCard = ({ id, name, image, species }) => {
   const { toggleFavourite, isInFavourites } = useCharacters();
   const isFav = isInFavourites(id);
 
