@@ -6,25 +6,26 @@ const CharactersCard = ({ id, name, species, image }) => {
   const { toggleFavourite, isInFavourites } = useCharacters();
   const isFav = isInFavourites(id);
 
-  const statusColor = {
-    Human: 'text-green-400',
-    Alien: 'text-purple-400',
-    Robot: 'text-yellow-300',
-  }[species] || 'text-gray-200';
-
   return (
     <motion.div
-      className="flex flex-col justify-between border border-green-400 rounded-lg p-5 bg-gray-800 bg-opacity-85 m-3 basis-64 shadow-md shadow-green-700 relative"
+      className="flex flex-col items-center justify-between border border-lime-400 rounded-2xl p-5 bg-purple-900 bg-opacity-90 shadow-lg shadow-lime-400 m-3 w-64 text-lime-200 relative"
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.3 }}
     >
-      <img src={image} alt={`Retrato de ${name}`} className="w-64 rounded-sm mx-auto" />
+      <img
+        src={image}
+        alt={`Retrato de ${name}`}
+        className="w-48 h-48 object-cover rounded-full border-4 border-lime-400 mb-3"
+      />
 
-      <p className="text-gray-100 text-xl pt-2">{name}</p>
-      <p className={`pt-1 ${statusColor}`}>Especie: {species}</p>
+      <p className="text-xl font-bold text-center" style={{ fontFamily: 'Macondo, cursive' }}>
+        {name}
+      </p>
+      <p className="text-sm mt-1">Especie: <span className="text-lime-300">{species}</span></p>
+      
 
       <button
         className="absolute top-2 right-2 text-xl"
@@ -32,7 +33,7 @@ const CharactersCard = ({ id, name, species, image }) => {
         aria-label={isFav ? "Quitar de favoritos" : "Añadir a favoritos"}
         title={isFav ? "Quitar de favoritos" : "Añadir a favoritos"}
       >
-        <i className={`bi ${isFav ? 'bi-heart-fill text-red-600' : 'bi-heart text-white'}`}></i>
+        <i className={`bi ${isFav ? 'bi-heart-fill text-red-600' : 'bi-heart text-lime-200'} hover:scale-110 transition-transform`}></i>
       </button>
     </motion.div>
   );

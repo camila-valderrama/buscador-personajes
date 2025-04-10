@@ -9,39 +9,45 @@ import { ModalProvider } from './context/ModalContext';
 function App() {
   return (
     <>
-      {/* Notificaciones emergentes tipo toast */}
-      <ToastContainer position="top-center" />
+      {/* Notificaciones tipo toast */}
+      <ToastContainer
+        position="top-center"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        toastClassName="bg-purple-800 text-lime-300 font-semibold rounded-xl shadow-lg shadow-lime-400"
+        bodyClassName="text-sm font-macondo"
+        progressClassName="bg-lime-300"
+      />
 
-      {/* Provider del modal */}
-      <ModalProvider>
-        {/* Provider del contexto de personajes */}
-        <CharactersProvider>
 
-          {/* Fondo con capa oscura para mejorar la visibilidad del contenido */}
-          <div className="min-h-screen bg-gradient-to-b from-purple-900 to-purple-700 text-lime-20">
-            {/* Capa de oscurecimiento */}
-            <div className="absolute inset-0 bg-black opacity-80"></div>
+      <CharactersProvider>
+        <ModalProvider>
 
-            {/* Contenido principal sobre el fondo */}
-            <div className="relative z-10 text-white">
-              <header>
-                <Header />
-              </header>
+          {/* Fondo general con degradado */}
+          <div className="min-h-screen flex flex-col bg-gradient-to-b from-purple-900 to-purple-700 text-lime-300">
 
-              <main className="py-8">
-                <SearchForm />
-                <Characters />
-              </main>
-            </div>
+            {/* Cabecera */}
+            <Header />
+
+            {/* Contenido principal */}
+            <main className="flex-1 py-6 px-4">
+              <SearchForm />
+              <Characters />
+            </main>
+
+            {/* Pie de página */}
+            <Footer />
           </div>
 
-          {/* Pie de página fuera del fondo */}
-          <footer>
-            <Footer />
-          </footer>
-
-        </CharactersProvider>
-      </ModalProvider>
+        </ModalProvider>
+      </CharactersProvider>
     </>
   );
 }
