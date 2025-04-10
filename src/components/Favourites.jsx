@@ -4,6 +4,7 @@ import { useCharacters } from '../context/CharactersContext';
 import CharactersCard from './CharacterCard';
 import { motion, AnimatePresence } from 'framer-motion';
 
+
 const Favourites = () => {
   const { toggleModal } = useModal();
   const { favourites } = useCharacters();
@@ -57,7 +58,6 @@ const Favourites = () => {
                   id={fav.id}
                   name={fav.name}
                   image={fav.image}
-                  status={fav.status}
                   species={fav.species}
                 />
               ))
@@ -71,4 +71,4 @@ const Favourites = () => {
   );
 };
 
-export default Favourites;
+export default Favourites

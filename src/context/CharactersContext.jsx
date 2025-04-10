@@ -5,7 +5,7 @@ export const CharactersContext = createContext();
 export const CharactersProvider = ({ children }) => {
   const [characters, setCharacters] = useState([]);
   const [favourites, setFavourites] = useState([]);
-  const [noResults, setNoResults] = useState(false); // ← se mantiene
+  const [noResults, setNoResults] = useState(false); 
 
   const toggleFavourite = (nuevoItem) => {
     const indexExists = favourites.findIndex(item => item.id === nuevoItem.id);
